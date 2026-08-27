@@ -107,6 +107,82 @@
 
 ---
 
+### 🗄️ Base de Datos — Tablas del Sistema
+
+El modelo de datos de Mimora Nails - Agus Atelier representa la estructura de la base de datos del sistema y permite la información relacionada con clientes, turnos, servicios, pagos, productos, stock y usuarios.
+
+| Tabla | Descripción |
+| :--- | :--- |
+| **Usuario** | Almacena los usuarios que pueden acceder al sistema y sus roles. |
+| **Cliente** | Almacena los datos personales y de contacto de las clientas. |
+| **Servicio** | Almacena los servicios ofrecidos, sus precios y duración. |
+| **Turno** | Almacena las reservas realizadas por las clientas. |
+| **Pago** | Registra los pagos realizados y los saldos pendientes. |
+| **Producto** | Almacena los productos e insumos utilizados. |
+| **MovimientoStock** | Registra las entradas y salidas de productos. |
+
+### 🗄️ **ENTIDADES Y ATRIBUTOS PRINCIPALES
+
+#### 👤 Usuario
+* **PK:** `idUsuario`
+* `nombreUsuario`
+* `contraseña`
+* `rol`
+
+#### 👩 Cliente
+* **PK:** `idCliente`
+* `nombre`
+* `apellido`
+* `telefono`
+* `email`
+
+#### 💅 Servicio
+* **PK:** `idServicio`
+* `nombre`
+* `descripcion`
+* `precio`
+* `duracion`
+
+#### 📅 Turno
+* **PK:** `idTurno`
+* `fecha`
+* `hora`
+* `estado`
+* **FK:** `idCliente`
+* **FK:** `idServicio`
+
+#### 💰 Pago
+* **PK:** `idPago`
+* `monto`
+* `fecha`
+* `metodoPago`
+* `saldoPendiente`
+* **FK:** `idTurno`
+
+#### 📦 Producto
+* **PK:** `idProducto`
+* `nombre`
+* `descripcion`
+* `precio`
+* `stockActual`
+
+#### 🔄 MovimientoStock
+* **PK:** `idMovimiento`
+* `tipoMovimiento`
+* `cantidad`
+* `fecha`
+* **FK:** `idProducto`
+
+## ** RELACIONES PRINCIPALES **
+
+* Un **cliente** puede tener uno o varios **turnos**
+* Un **turno** pertenece a un solo **cliente**
+* Un Servicio puede estar asociado a varios Turnos.
+* Un Turno puede tener uno o varios Pagos, según la forma en que se gestione la seña y el saldo.
+* Un Producto puede tener varios MovimientosStock.
+* Un MovimientoStock pertenece a un único Producto.
+
+----
 ## 🛠️ Tecnologías Utilizadas
 * **Frontend:** HTML5, CSS3, JavaScript
 * **Backend:** C#, .NET
