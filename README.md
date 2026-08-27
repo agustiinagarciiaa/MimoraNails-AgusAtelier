@@ -57,6 +57,45 @@ Sistema web para gestión de turnos, clientes, servicios, pagos y stock | Desarr
 
 <img width="1408" height="768" alt="diagramadecu" src="https://github.com/user-attachments/assets/25f35817-d4b7-4b37-a198-37a971b323d9" />
 
+👤 Acceso
+CU01 — Iniciar sesión
+
+👩 Clientes
+CU02 — Registrar cliente
+CU03 — Modificar cliente
+CU04 — Eliminar cliente
+CU05 — Buscar cliente
+CU06 — Consultar historial del cliente
+
+📅 Turnos
+CU07 — Crear turno
+CU08 — Modificar turno
+CU09 — Cancelar turno
+CU10 — Consultar disponibilidad de horarios
+CU11 — Consultar turnos
+
+💅 Servicios
+CU12 — Registrar servicio
+CU13 — Modificar precio del servicio
+CU14 — Consultar servicios
+
+💰 Pagos
+CU15 — Registrar pago
+CU16 — Registrar método de pago
+CU17 — Consultar saldo pendiente
+
+📦 Productos y stock
+CU18 — Registrar producto
+CU19 — Modificar producto
+CU20 — Registrar entrada de stock
+CU21 — Registrar salida de stock
+CU22 — Consultar stock
+
+📊 Reportes
+CU23 — Consultar ingresos
+CU24 — Consultar cantidad de turnos
+CU25 — Consultar servicios más solicitados
+
 
 ---
 
