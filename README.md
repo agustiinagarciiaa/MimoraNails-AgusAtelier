@@ -55,7 +55,7 @@ Sistema web para gestión de turnos, clientes, servicios, pagos y stock | Desarr
 
 ## 📊 Diagrama de Casos de Uso
 
-![Diagrama de Casos de Uso](<img width="1408" height="768" alt="diagramaDeCU" src="https://github.com/user-attachments/assets/410506c9-9e01-4b48-85e4-d6a5b5c86868" />)
+![Diagrama de Casos de Uso]("C:\Users\agusg\Downloads\diagramaDeCU.jpg")
 
 
 ---
