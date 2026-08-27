@@ -101,6 +101,12 @@
 
 ---
 
+## **DIAGRAMA DE CLASE** 
+
+<img width="1408" height="768" alt="diagramadeclase" src="https://github.com/user-attachments/assets/ef95cda8-5381-4935-8c11-21b32444a09e" />
+
+---
+
 ## 🛠️ Tecnologías Utilizadas
 * **Frontend:** HTML5, CSS3, JavaScript
 * **Backend:** C#, .NET
