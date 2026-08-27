@@ -1,12 +1,13 @@
-# MimoraNails-AgusAtelier
-Sistema web para gestión de turnos, clientes, servicios, pagos y stock | Desarrollado con C#, .NET, SQL, HTML, CSS y JS.
+# 💅 MimoraNails - Agus Atelier
+
+> Sistema web para la gestión integral de turnos, clientes, servicios, pagos, stock y reportes.
 
 ---
 
 ## 👥 Actores del Sistema
 * **Administrador / Dueña:** Control total sobre clientes, agenda, catálogo de servicios, registro de pagos, inventario de productos y reportes de ingresos.
 * **Manicurista:** Consulta de clientes, gestión de turnos asignados y registro de servicios realizados.
-* **Clienta:** Consulta de catálogo de servicios, reserva y cancelación de turnos, y seguimiento de sus citas.
+* **Clienta:** Consulta del catálogo de servicios, reserva y cancelación de turnos, y seguimiento de sus citas.
 
 ---
 
@@ -53,51 +54,50 @@ Sistema web para gestión de turnos, clientes, servicios, pagos y stock | Desarr
 
 ---
 
-## 📊 Diagrama de Casos de Uso
+## 📊 Diagrama y Casos de Uso
 
-<img width="1408" height="768" alt="diagramadecu" src="https://github.com/user-attachments/assets/25f35817-d4b7-4b37-a198-37a971b323d9" />
+<img width="1408" alt="Diagrama de Casos de Uso" src="https://github.com/user-attachments/assets/25f35817-d4b7-4b37-a198-37a971b323d9" />
 
-👤 Acceso
-CU01 — Iniciar sesión
+### Detalle de Casos de Uso (CU)
 
-👩 Clientes
-CU02 — Registrar cliente
-CU03 — Modificar cliente
-CU04 — Eliminar cliente
-CU05 — Buscar cliente
-CU06 — Consultar historial del cliente
+* **👤 Acceso:**
+  * **CU01:** Iniciar sesión
 
-📅 Turnos
-CU07 — Crear turno
-CU08 — Modificar turno
-CU09 — Cancelar turno
-CU10 — Consultar disponibilidad de horarios
-CU11 — Consultar turnos
+* **👩 Clientes:**
+  * **CU02:** Registrar cliente
+  * **CU03:** Modificar cliente
+  * **CU04:** Eliminar cliente
+  * **CU05:** Buscar cliente
+  * **CU06:** Consultar historial del cliente
 
-💅 Servicios
-CU12 — Registrar servicio
-CU13 — Modificar precio del servicio
-CU14 — Consultar servicios
+* **📅 Turnos:**
+  * **CU07:** Crear turno
+  * **CU08:** Modificar turno
+  * **CU09:** Cancelar turno
+  * **CU10:** Consultar disponibilidad de horarios
+  * **CU11:** Consultar turnos
 
-💰 Pagos
-CU15 — Registrar pago
-CU16 — Registrar método de pago
-CU17 — Consultar saldo pendiente
+* **💅 Servicios:**
+  * **CU12:** Registrar servicio
+  * **CU13:** Modificar precio del servicio
+  * **CU14:** Consultar servicios
 
-📦 Productos y stock
-CU18 — Registrar producto
-CU19 — Modificar producto
-CU20 — Registrar entrada de stock
-CU21 — Registrar salida de stock
-CU22 — Consultar stock
+* **💰 Pagos:**
+  * **CU15:** Registrar pago
+  * **CU16:** Registrar método de pago
+  * **CU17:** Consultar saldo pendiente
 
-📊 Reportes
-CU23 — Consultar ingresos
-CU24 — Consultar cantidad de turnos
-CU25 — Consultar servicios más solicitados
+* **📦 Productos y Stock:**
+  * **CU18:** Registrar producto
+  * **CU19:** Modificar producto
+  * **CU20:** Registrar entrada de stock
+  * **CU21:** Registrar salida de stock
+  * **CU22:** Consultar stock
 
-
----
+* **📊 Reportes:**
+  * **CU23:** Consultar ingresos
+  * **CU24:** Consultar cantidad de turnos
+  * **CU25:** Consultar servicios más solicitados
 
 ---
 
