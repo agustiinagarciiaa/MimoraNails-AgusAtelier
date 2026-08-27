@@ -182,6 +182,11 @@ El modelo de datos de Mimora Nails - Agus Atelier representa la estructura de la
 * Un Producto puede tener varios MovimientosStock.
 * Un MovimientoStock pertenece a un único Producto.
 
+## ** DIAGRAMA DE BASE DE DATOS **
+
+<img width="1408" height="768" alt="diagramabdd" src="https://github.com/user-attachments/assets/9c12678b-8355-4618-af1c-56c327f366d1" />
+
+
 ----
 ## 🛠️ Tecnologías Utilizadas
 * **Frontend:** HTML5, CSS3, JavaScript
