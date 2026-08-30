@@ -1,0 +1,68 @@
+﻿@model sistemaUñas_MimoraNails.Models.Turno
+
+@{
+    ViewData["Title"] = "Editar Turno";
+}
+
+<h1>Editar Turno</h1>
+
+<form asp-action="Edit" method="post">
+
+    <input type="hidden" asp-for="IdTurno" />
+
+    <div class="mb-3">
+        <label asp-for="IdCliente" class="form-label">Cliente</label>
+
+        <select asp-for="IdCliente" class="form-control">
+            @foreach (var cliente in ViewBag.Clientes)
+            {
+                <option value="@cliente.IdCliente">
+                    @cliente.Nombre @cliente.Apellido
+                </option>
+            }
+        </select>
+    </div>
+
+    <div class="mb-3">
+        <label asp-for="IdServicio" class="form-label">Servicio</label>
+
+        <select asp-for="IdServicio" class="form-control">
+            @foreach (var servicio in ViewBag.Servicios)
+            {
+                <option value="@servicio.IdServicio">
+                    @servicio.NombreServicio
+                </option>
+            }
+        </select>
+    </div>
+
+    <div class="mb-3">
+        <label asp-for="FechaTurno" class="form-label">Fecha</label>
+        <input asp-for="FechaTurno" class="form-control" type="date" />
+    </div>
+
+    <div class="mb-3">
+        <label asp-for="HoraTurno" class="form-label">Hora</label>
+        <input asp-for="HoraTurno" class="form-control" type="time" />
+    </div>
+
+    <div class="mb-3">
+        <label asp-for="Estado" class="form-label">Estado</label>
+
+        <select asp-for="Estado" class="form-control">
+            <option value="Pendiente">Pendiente</option>
+            <option value="Confirmado">Confirmado</option>
+            <option value="Realizado">Realizado</option>
+            <option value="Cancelado">Cancelado</option>
+        </select>
+    </div>
+
+    <button type="submit" class="btn btn-primary">
+        Guardar cambios
+    </button>
+
+    <a asp-action="Index" class="btn btn-secondary">
+        Volver
+    </a>
+
+</form>

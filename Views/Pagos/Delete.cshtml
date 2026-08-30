@@ -1,0 +1,70 @@
+﻿@model sistemaUñas_MimoraNails.Models.Pago
+
+@{
+    ViewData["Title"] = "Eliminar Pago";
+}
+
+<h1>Eliminar Pago</h1>
+
+<h3>¿Estás segura de que querés eliminar este pago?</h3>
+
+<div>
+    <hr />
+
+    <dl class="row">
+
+        <dt class="col-sm-3">Cliente</dt>
+        <dd class="col-sm-9">
+            @Model.IdTurnoNavigation.IdClienteNavigation.Nombre
+            @Model.IdTurnoNavigation.IdClienteNavigation.Apellido
+        </dd>
+
+        <dt class="col-sm-3">Servicio</dt>
+        <dd class="col-sm-9">
+            @Model.IdTurnoNavigation.IdServicioNavigation.NombreServicio
+        </dd>
+
+        <dt class="col-sm-3">Fecha del Turno</dt>
+        <dd class="col-sm-9">
+            @Model.IdTurnoNavigation.FechaTurno
+        </dd>
+
+        <dt class="col-sm-3">Hora del Turno</dt>
+        <dd class="col-sm-9">
+            @Model.IdTurnoNavigation.HoraTurno
+        </dd>
+
+        <dt class="col-sm-3">Monto</dt>
+        <dd class="col-sm-9">
+            @Model.Monto
+        </dd>
+
+        <dt class="col-sm-3">Fecha de Pago</dt>
+        <dd class="col-sm-9">
+            @Model.FechaPago
+        </dd>
+
+        <dt class="col-sm-3">Método de Pago</dt>
+        <dd class="col-sm-9">
+            @Model.MetodoPago
+        </dd>
+
+        <dt class="col-sm-3">Saldo Pendiente</dt>
+        <dd class="col-sm-9">
+            @Model.SaldoPendiente
+        </dd>
+
+    </dl>
+
+    <form asp-action="Delete" method="post">
+        <input type="hidden" asp-for="IdPago" />
+
+        <button type="submit" class="btn btn-danger">
+            Sí, eliminar
+        </button>
+
+        <a asp-action="Index" class="btn btn-secondary">
+            Cancelar
+        </a>
+    </form>
+</div>

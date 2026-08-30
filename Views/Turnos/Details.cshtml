@@ -1,0 +1,50 @@
+﻿@model sistemaUñas_MimoraNails.Models.Turno
+
+@{
+    ViewData["Title"] = "Detalles del Turno";
+}
+
+<h1>Detalles del Turno</h1>
+
+<div>
+    <h4>Turno</h4>
+    <hr />
+
+    <dl class="row">
+
+        <dt class="col-sm-3">Cliente</dt>
+        <dd class="col-sm-9">
+            @Model.IdClienteNavigation.Nombre
+            @Model.IdClienteNavigation.Apellido
+        </dd>
+
+        <dt class="col-sm-3">Servicio</dt>
+        <dd class="col-sm-9">
+            @Model.IdServicioNavigation.NombreServicio
+        </dd>
+
+        <dt class="col-sm-3">Fecha</dt>
+        <dd class="col-sm-9">
+            @Model.FechaTurno
+        </dd>
+
+        <dt class="col-sm-3">Hora</dt>
+        <dd class="col-sm-9">
+            @Model.HoraTurno
+        </dd>
+
+        <dt class="col-sm-3">Estado</dt>
+        <dd class="col-sm-9">
+            @Model.Estado
+        </dd>
+
+    </dl>
+</div>
+
+<a asp-action="Edit" asp-route-id="@Model.IdTurno" class="btn btn-warning">
+    Editar
+</a>
+
+<a asp-action="Index" class="btn btn-secondary">
+    Volver
+</a>

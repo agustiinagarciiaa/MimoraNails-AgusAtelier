@@ -1,0 +1,53 @@
+﻿@model IEnumerable<sistemaUñas_MimoraNails.Models.Pago>
+
+@{
+    ViewData["Title"] = "Pagos";
+}
+
+<h1>Pagos</h1>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>Monto</th>
+            <th>Fecha</th>
+            <th>Método de Pago</th>
+            <th>Saldo Pendiente</th>
+            <th>Cliente</th>
+            <th>Servicio</th>
+            <th>Acciones</th>
+        </tr>
+    </thead>
+
+    <tbody>
+        @foreach (var pago in Model)
+        {
+            <tr>
+                <td>@pago.Monto</td>
+                <td>@pago.FechaPago</td>
+                <td>@pago.MetodoPago</td>
+                <td>@pago.SaldoPendiente</td>
+                <td>
+                    @pago.IdTurnoNavigation.IdClienteNavigation.Nombre
+                    @pago.IdTurnoNavigation.IdClienteNavigation.Apellido
+                </td>
+                <td>
+                    @pago.IdTurnoNavigation.IdServicioNavigation.NombreServicio
+                </td>
+                <td>
+                    <a asp-action="Details" asp-route-id="@pago.IdPago" class="btn btn-info">
+                        Detalles
+                    </a>
+
+                    <a asp-action="Edit" asp-route-id="@pago.IdPago" class="btn btn-warning">
+                        Editar
+                    </a>
+
+                    <a asp-action="Delete" asp-route-id="@pago.IdPago" class="btn btn-danger">
+                        Eliminar
+                    </a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>

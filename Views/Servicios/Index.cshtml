@@ -1,0 +1,46 @@
+﻿@model IEnumerable<sistemaUñas_MimoraNails.Models.Servicio>
+
+@{
+    ViewData["Title"] = "Servicios";
+}
+
+<h1>Servicios</h1>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>Nombre</th>
+            <th>Descripción</th>
+            <th>Precio</th>
+            <th>Duración</th>
+            <th>Acciones</th>
+        </tr>
+    </thead>
+
+    <tbody>
+        @foreach (var servicio in Model)
+        {
+            <tr>
+                <td>@servicio.NombreServicio</td>
+                <td>@servicio.Descripcion</td>
+                <td>@servicio.Precio</td>
+                <td>@servicio.Duracion</td>
+                <td>
+                    <a asp-action="Edit" asp-route-id="@servicio.IdServicio" class="btn btn-warning">
+                        Editar
+                    </a>
+                </td>
+                <td>
+                <a asp-action="Details" asp-route-id="@servicio.IdServicio" class="btn btn-info">
+                        Detalles
+                    </a>
+                </td>
+                <td>
+                    <a asp-action="Delete" asp-route-id="@servicio.IdServicio" class="btn btn-danger">
+                        Eliminar
+                    </a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>

@@ -1,0 +1,65 @@
+﻿@model sistemaUñas_MimoraNails.Models.Pago
+
+@{
+    ViewData["Title"] = "Detalles del Pago";
+}
+
+<h1>Detalles del Pago</h1>
+
+<div>
+    <h4>Pago</h4>
+    <hr />
+
+    <dl class="row">
+
+        <dt class="col-sm-3">Cliente</dt>
+        <dd class="col-sm-9">
+            @Model.IdTurnoNavigation.IdClienteNavigation.Nombre
+            @Model.IdTurnoNavigation.IdClienteNavigation.Apellido
+        </dd>
+
+        <dt class="col-sm-3">Servicio</dt>
+        <dd class="col-sm-9">
+            @Model.IdTurnoNavigation.IdServicioNavigation.NombreServicio
+        </dd>
+
+        <dt class="col-sm-3">Fecha del Turno</dt>
+        <dd class="col-sm-9">
+            @Model.IdTurnoNavigation.FechaTurno
+        </dd>
+
+        <dt class="col-sm-3">Hora del Turno</dt>
+        <dd class="col-sm-9">
+            @Model.IdTurnoNavigation.HoraTurno
+        </dd>
+
+        <dt class="col-sm-3">Monto</dt>
+        <dd class="col-sm-9">
+            @Model.Monto
+        </dd>
+
+        <dt class="col-sm-3">Fecha de Pago</dt>
+        <dd class="col-sm-9">
+            @Model.FechaPago
+        </dd>
+
+        <dt class="col-sm-3">Método de Pago</dt>
+        <dd class="col-sm-9">
+            @Model.MetodoPago
+        </dd>
+
+        <dt class="col-sm-3">Saldo Pendiente</dt>
+        <dd class="col-sm-9">
+            @Model.SaldoPendiente
+        </dd>
+
+    </dl>
+</div>
+
+<a asp-action="Edit" asp-route-id="@Model.IdPago" class="btn btn-warning">
+    Editar
+</a>
+
+<a asp-action="Index" class="btn btn-secondary">
+    Volver
+</a>

@@ -1,0 +1,39 @@
+﻿@model sistemaUñas_MimoraNails.Models.Servicio
+
+@{
+    ViewData["Title"] = "Eliminar Servicio";
+}
+
+<h1>Eliminar Servicio</h1>
+
+<h3>¿Estás segura de que querés eliminar este servicio?</h3>
+
+<div>
+    <hr />
+
+    <dl class="row">
+        <dt class="col-sm-3">Nombre</dt>
+        <dd class="col-sm-9">@Model.NombreServicio</dd>
+
+        <dt class="col-sm-3">Descripción</dt>
+        <dd class="col-sm-9">@Model.Descripcion</dd>
+
+        <dt class="col-sm-3">Precio</dt>
+        <dd class="col-sm-9">@Model.Precio</dd>
+
+        <dt class="col-sm-3">Duración</dt>
+        <dd class="col-sm-9">@Model.Duracion minutos</dd>
+    </dl>
+
+    <form asp-action="Delete" method="post">
+        <input type="hidden" asp-for="IdServicio" />
+
+        <button type="submit" class="btn btn-danger">
+            Sí, eliminar
+        </button>
+
+        <a asp-action="Index" class="btn btn-secondary">
+            Cancelar
+        </a>
+    </form>
+</div>

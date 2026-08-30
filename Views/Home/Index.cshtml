@@ -1,0 +1,197 @@
+﻿@using Microsoft.AspNetCore.Http
+
+@{
+    ViewData["Title"] = "Inicio";
+
+    var usuario = Context.Session.GetString("Usuario");
+    var rol = Context.Session.GetString("Rol");
+}
+
+<p>Usuario: @ViewBag.Usuario</p>
+<p>Rol: @ViewBag.Rol</p>
+
+<div class="text-center mt-5">
+
+    <h1 class="display-4">💅 MimoraNails</h1>
+
+    <h2 class="mb-3">Agus Atelier</h2>
+
+    <p class="lead">
+        Bienvenida, <strong>@usuario</strong> 💜
+    </p>
+
+    <p>
+        Rol: <strong>@rol</strong>
+    </p>
+
+</div>
+
+<div class="container mt-5">
+
+    <div class="row g-4">
+
+        @* ADMINISTRADOR *@
+        @if (rol == "Administrador")
+        {
+            <div class="col-md-6">
+                <div class="card text-center shadow-sm h-100">
+                    <div class="card-body">
+                        <h3>👥 Clientes</h3>
+                        <p>Administrá tus clientes.</p>
+
+                        <a asp-controller="Clientes"
+                           asp-action="Index"
+                           class="btn btn-primary">
+                            Ver clientes
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-6">
+                <div class="card text-center shadow-sm h-100">
+                    <div class="card-body">
+                        <h3>💅 Servicios</h3>
+                        <p>Administrá los servicios.</p>
+
+                        <a asp-controller="Servicios"
+                           asp-action="Index"
+                           class="btn btn-primary">
+                            Ver servicios
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-6">
+                <div class="card text-center shadow-sm h-100">
+                    <div class="card-body">
+                        <h3>📅 Turnos</h3>
+                        <p>Gestioná los turnos.</p>
+
+                        <a asp-controller="Turnos"
+                           asp-action="Index"
+                           class="btn btn-primary">
+                            Ver turnos
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-6">
+                <div class="card text-center shadow-sm h-100">
+                    <div class="card-body">
+                        <h3>💰 Pagos</h3>
+                        <p>Registrá y consultá los pagos.</p>
+
+                        <a asp-controller="Pagos"
+                           asp-action="Index"
+                           class="btn btn-primary">
+                            Ver pagos
+                        </a>
+                    </div>
+                </div>
+            </div>
+        }
+
+        @* MANICURISTA *@
+        @if (rol == "Manicurista")
+        {
+            <div class="col-md-6">
+                <div class="card text-center shadow-sm h-100">
+                    <div class="card-body">
+                        <h3>👥 Clientes</h3>
+                        <p>Consultá los clientes.</p>
+
+                        <a asp-controller="Clientes"
+                           asp-action="Index"
+                           class="btn btn-primary">
+                            Ver clientes
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-6">
+                <div class="card text-center shadow-sm h-100">
+                    <div class="card-body">
+                        <h3>📅 Turnos</h3>
+                        <p>Gestioná los turnos.</p>
+
+                        <a asp-controller="Turnos"
+                           asp-action="Index"
+                           class="btn btn-primary">
+                            Ver turnos
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-6">
+                <div class="card text-center shadow-sm h-100">
+                    <div class="card-body">
+                        <h3>💰 Pagos</h3>
+                        <p>Consultá los pagos.</p>
+
+                        <a asp-controller="Pagos"
+                           asp-action="Index"
+                           class="btn btn-primary">
+                            Ver pagos
+                        </a>
+                    </div>
+                </div>
+            </div>
+        }
+
+        @* CLIENTE *@
+        @if (rol == "Cliente")
+        {
+            <div class="col-md-6">
+                <div class="card text-center shadow-sm h-100">
+                    <div class="card-body">
+                        <h3>💅 Servicios</h3>
+                        <p>Consultá los servicios disponibles.</p>
+
+                        <a asp-controller="Servicios"
+                           asp-action="Index"
+                           class="btn btn-primary">
+                            Ver servicios
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-6">
+                <div class="card text-center shadow-sm h-100">
+                    <div class="card-body">
+                        <h3>📅 Turnos</h3>
+                        <p>Consultá tus turnos.</p>
+
+                        <a asp-controller="Turnos"
+                           asp-action="Index"
+                           class="btn btn-primary">
+                            Ver turnos
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-6">
+                <div class="card text-center shadow-sm h-100">
+                    <div class="card-body">
+                        <h3>💰 Pagos</h3>
+                        <p>Consultá tus pagos.</p>
+
+                        <a asp-controller="Pagos"
+                           asp-action="Index"
+                           class="btn btn-primary">
+                            Ver pagos
+                        </a>
+                    </div>
+                </div>
+            </div>
+        }
+
+    </div>
+
+</div>
